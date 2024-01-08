@@ -1,0 +1,662 @@
+<!-- a DOCTYPE decoration to tell the browser which version of html to expect-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+ 
+    <!--Bootstrap viewport for mobile: to ensure proper rendering and touch zooming-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Add Superslides CSS-->
+    <link rel="stylesheet" type="text/css" href="css/superslides.css">
+    <!--Add Owl Carousel CSS: slider in technical skills section-->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <!--Add Fancyapps CSS: blocks in the portfolio section-->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+
+    <!--Install JQuery: a JavaScript library--> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!--Add our CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+    <div class="loader">
+        <div class="inner"></div>
+    </div>
+
+    <div id="slides">
+
+      <div class="overlay"></div>
+
+      <div class="slides-container">
+          <img src="img/slide1.jpg" alt="">
+          <img src="img/slide2.jpg" alt="">
+          <img src="img/slide3.jpg" alt="">
+      </div>
+
+      <div class='titleMessage'>
+          <div class="heading">
+              <p class="main">ZHE WANG</p>
+              <p class="sub typed"></p>
+          </div>
+      </div>
+
+      <nav class="slides-navigation">
+          <a href="#" class="next"></a>
+          <a href="#" class="prev"></a>
+      </nav>
+
+    </div>
+
+    <nav id="navigation" class="navbar navbar-expand-lg">
+
+	  <a class="navbar-brand" href="#">Welcome</a>
+
+	  <button class="navbar-toggler" type="button" aria-controls="navbarNav"
+	  aria-expanded="false" aria-label="Toggle navigation">
+
+	      <span class="navbar-toggler-icon"></span>
+
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarNav">
+
+	      <ul class="navbar-nav">
+
+	          <li class="nav-item active">
+	              <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+	          </li>
+
+	          <li class="nav-item">
+	              <a class="nav-link" href="#skills">Skills</a>
+		  </li>
+
+	          <li class="nav-item">
+	              <a class="nav-link" href="#stats">Stats</a>
+	          </li>
+
+	          <li class="nav-item">
+	              <a class="nav-link" href="#contact">Contact</a>
+	          </li>
+
+                  <li class="nav-item">
+	              <a class="nav-link" href="#portfolio">Portfolio</a>
+	          </li>
+
+	      </ul>
+
+	  </div>
+
+          <script>
+              // Initialize the collapse functionality explicitly
+	      // 'data-toggler','data-target' attributes from the button doesn't work
+              $(document).ready(function () {
+                  $('.navbar-toggler').on('click', function () {
+                      $('#navbarNav').collapse('toggle');
+                  });
+              });
+          </script>
+    
+    </nav>
+
+    <div id="about" class="section">
+        
+        <div class="container">
+
+            <div class="row">
+                
+                <!--the numbers (5 and 7 here) represent the 
+                the ratio of the columns and add up to 12-->
+                <div class="col-md-6">
+                    <img class="aboutImage" src="img/headshot.jpg">
+                </div>
+    
+                <div class="col-md-6">
+
+                    <h4>Hi! My Name is Zhe Wang.</h4> 
+
+		    <p>I'm a career-driven computational researcher with skills
+		    and expertise catered to the field of data science. I have
+		    an interdisciplinary background in data processing;
+		    modeling; analysis, data-driven decision-making,
+		    computational chemistry, mathematical modeling, and
+		    programming for tackling intricate applications.</p>
+
+		    <p>My computational research, programming, and data
+		    analysis experience has sharpened my skills in
+		    problem-solving, decision-making, project management,
+		    teamwork, and communication which are crucial for a data
+		    scientist role. I’m a fast learner with an inquisitive
+		    personality always keen to explore and learn new methods
+		    and cutting-edge technologies in the complex computational
+		    analysis and data science fields. My passion is driven by
+		    the immense impact that data science, data-related
+		    technologies, artificial intelligence, and machine learning
+		    are poised to have on the future of everything. I am eager
+		    to join a data science team, implement my knowledge and
+		    expertise, and learn new skills to conquer real-world
+		    challenges.</p>
+
+                </div>
+                
+            </div> 
+
+        </div>
+
+    </div>
+    
+    <div id="skills" class="skillsSection section">
+        
+        <div class="container">
+
+            <div class="row">
+                
+		<div class="col-md-12 text-center">
+                    <h2>TECHNICAL SKILLS</h2>
+		    <p>A representation of my proficiency in each skill</p>
+		    <p>(Scroll to view all)</p>
+		</div>
+
+                <div class="owl-carousel owl-theme">
+                    
+		    <!--skill 1-->
+                    <div class="skill">
+
+                        <span class="chart" data-percent="67">
+
+			    <span class="percent">67</span>
+			    <canvas height="152" width="152"></canvas>
+
+			</span>
+
+			<h4>Python</h4>
+			<p>Used for rogramming and Python package development.</p>
+
+		    </div>
+                    
+		    <!--skill 2-->
+                    <div class="skill">
+
+                        <span class="chart" data-percent="67">
+
+			    <span class="percent">67</span>
+			    <canvas height="152" width="152"></canvas>
+
+			</span>
+
+			<h4>SQL</h4>
+			<p>Used in data science projects.</p>
+
+		    </div>
+                   
+		    <!--skill 3-->
+                    <div class="skill">
+
+                        <span class="chart" data-percent="67">
+
+			    <span class="percent">67</span>
+			    <canvas height="152" width="152"></canvas>
+
+			</span>
+
+			<h4>Machine Learning</h4>
+			<p>Used for time series forecasing and data analysis.</p>
+
+		    </div>
+
+                     <!--skill 4-->
+                    <div class="skill">
+
+                        <span class="chart" data-percent="67">
+
+			    <span class="percent">67</span>
+			    <canvas height="152" width="152"></canvas>
+
+			</span>
+
+			<h4>Cloud Computing</h4>
+			<p>Certified as AWS Practitioner and used for hosting websites.</p>
+
+		    </div>
+
+                    <!--skill 5-->
+                    <div class="skill">
+
+                        <span class="chart" data-percent="67">
+
+			    <span class="percent">67</span>
+			    <canvas height="152" width="152"></canvas>
+
+			</span>
+
+			<h4>Presentation</h4>
+			<p>Proficient in data visualization and presentation.</p>
+
+		    </div>
+
+                    <!--skill 6-->
+                    <div class="skill">
+
+                        <span class="chart" data-percent="67">
+
+			    <span class="percent">67</span>
+			    <canvas height="152" width="152"></canvas>
+
+			</span>
+
+			<h4>Collaboration</h4>
+			<p>Experienced in cross-functional collaboration.</p>
+
+		    </div>
+                    
+                    <!--skill 7-->
+                    <div class="skill">
+
+                        <span class="chart" data-percent="67">
+
+			    <span class="percent">67</span>
+			    <canvas height="152" width="152"></canvas>
+
+			</span>
+
+			<h4>Communication</h4>
+			<p>Strong verbal and communication skills gained from work experience.</p>
+
+		    </div>
+
+                </div>
+                                
+            </div> 
+
+        </div>
+
+    </div>
+
+    <div id="stats" class="statsSection section">
+
+        <div class="container">
+
+	    <div class="row">
+
+	        <div class="col-md-4 col-sm-6">
+                
+		    <div class="squareItem">
+                        
+			<div class="squareInnerContainer">
+                        
+			    <div class="squareIcon">
+			        <i class="fa-regular fa-calendar-days"></i>
+                            </div>
+
+			    <div class="squareContent">
+                                <h2 class="counter">7</h2>
+				<h3>Years of Experience</h3>
+			    </div>
+
+			</div>
+
+		    </div>
+
+		</div>
+
+                <div class="col-md-4 col-sm-6">
+                
+		    <div class="squareItem">
+                        
+			<div class="squareInnerContainer">
+                        
+			    <div class="squareIcon">
+			        <i class="fa-regular fa-bell"></i>
+                            </div>
+
+			    <div class="squareContent">
+                                <h2>2</h2>
+				<h3>Projects</h3>
+			    </div>
+
+			</div>
+
+		    </div>
+
+		</div>
+
+                <div class="col-md-4 col-sm-6">
+                
+		    <div class="squareItem">
+                        
+			<div class="squareInnerContainer">
+                        
+			    <div class="squareIcon">
+			        <i class="fa fa-clock"></i>
+                            </div>
+
+			    <div class="squareContent">
+                                <h2>5</h2>
+				<h3>Certifications</h3>
+			    </div>
+
+			</div>
+
+		    </div>
+
+		</div>
+
+                
+	    </div>
+
+	</div>
+
+    </div>
+<!--
+     <div id="contact" class="contactSection section">
+      
+        <div class="col-md-12 text-center">
+
+            <p class="subHeading">Like what you see?</p>
+	    <h2>I'd love to hear from you!</h2>
+	    <a href="mailTo:zhw0930@vt.edu" class="contactButton">GET IN TOUCH</a>
+
+	</div>
+
+    </div>
+-->
+
+    <div id="contact" class="contactSection section">
+      
+        <div class="container">
+
+	    <div class="row">
+
+                <div class="col-md-12 text-center">        
+                    <p class="subHeading">Like what you see?</p>
+	            <h2>I'd love to hear from you!</h2>        
+	        </div>
+
+	        <div class="col-md-4 text-center"> 
+                    <a href="mailTo:zhw0930@vt.edu" class="contactButton">Email</a>
+	        </div>
+    
+                <div class="col-md-4 text-center">
+		    <!--Open the linked page in a new tab-->
+                    <a href="https://www.linkedin.com/in/zw2046/" target="_blank" 
+		    rel="noopener noreferrer" class="contactButton">LinkedIn</a>
+	        </div>
+    
+                <div class="col-md-4 text-center"> 
+                    <a href="https://github.com/zw0930/" target="_blank"
+		    rel="noopener noreferrer" class="contactButton">GitHub</a>
+	        </div>
+
+	    </div>
+
+	</div>
+
+    </div>
+
+    <div id="portfolio" class="section">
+
+        <div class="container">
+
+	    <div class="row">
+
+	        <div class ="heading">
+
+		    <h2>PORTFOLIO</h2>
+
+		</div>
+
+		<div class="filter">
+
+		    <ul id="filters">
+		        
+			<li><a href="#" data-filter="*" class="current">ALL</a></li>
+			<li><a href="#" data-filter=".Python">Python</a></li>
+			<li><a href="#" data-filter=".SQL">SQL</a></li>
+			<li><a href="#" data-filter=".ML">ML</a></li>
+
+		    </ul>
+
+		</div>
+
+                <div class="itemsContainer">
+
+		    <ul class="items">
+		        
+			<!--Bootstrap grid for different devices-->
+			<!--onclick is used to fix a bug on mobile-->
+			<li onclick="" class="Python col-xs-6 col-sm-4 col-md-3 col-lg-3">
+
+			    <div class="item">
+
+			        <img src="img/portfolio/thumbnails/icon-square.jpg">
+
+				<div class="icons">
+
+				    <a href="img/portfolio/icon.jpg" title="View image" 
+				    class="openButton" data-fancybox data-caption="This is the full image">
+				        <i class="fa fa-search"></i>
+				    </a>
+
+				    <a href="https://github.com/zw0930/MyProject-BuyingBehaviorPrediction" 
+				    target="_blank" rel="noopener noreferrer" class="projectLink">
+				        <i class="fa fa-link"></i>
+				    </a>
+
+				</div>
+
+				<div class="imageOverlay"></div>
+
+			    </div>
+
+			</li>		
+
+                        <li onclick="" class="SQL col-xs-6 col-sm-4 col-md-3 col-lg-3">
+
+			    <div class="item">
+
+			        <img src="img/portfolio/thumbnails/icon-square.jpg">
+
+				<div class="icons">
+
+				    <a href="img/portfolio/icon.jpg" title="View image" 
+				    class="openButton" data-fancybox data-caption="This is the full image">
+				        <i class="fa fa-search"></i>
+				    </a>
+
+				    <a href="https://github.com/zw0930/MyProject-BuyingBehaviorPrediction" 
+				    target="_blank" rel="noopener noreferrer" class="projectLink">
+				        <i class="fa fa-link"></i>
+				    </a>
+
+				</div>
+
+				<div class="imageOverlay"></div>
+
+			    </div>
+
+			</li>	
+
+                        <li onclick="" class="ML col-xs-6 col-sm-4 col-md-3 col-lg-3">
+
+			    <div class="item">
+
+			        <img src="img/portfolio/thumbnails/icon-square.jpg">
+
+				<div class="icons">
+
+				    <a href="img/portfolio/icon.jpg" title="View image" 
+				    class="openButton" data-fancybox data-caption="This is the full image">
+				        <i class="fa fa-search"></i>
+				    </a>
+
+				    <a href="https://github.com/zw0930/MyProject-BuyingBehaviorPrediction" 
+				    target="_blank" rel="noopener noreferrer" class="projectLink">
+				        <i class="fa fa-link"></i>
+				    </a>
+
+				</div>
+
+				<div class="imageOverlay"></div>
+
+			    </div>
+
+			</li>			
+
+                        <li onclick="" class="SQL col-xs-6 col-sm-4 col-md-3 col-lg-3">
+
+			    <div class="item">
+
+			        <img src="img/portfolio/thumbnails/icon-square.jpg">
+
+				<div class="icons">
+
+				    <a href="img/portfolio/icon.jpg" title="View image" 
+				    class="openButton" data-fancybox data-caption="This is the full image">
+				        <i class="fa fa-search"></i>
+				    </a>
+
+				    <a href="https://github.com/zw0930/MyProject-BuyingBehaviorPrediction" 
+				    target="_blank" rel="noopener noreferrer" class="projectLink">
+				        <i class="fa fa-link"></i>
+				    </a>
+
+				</div>
+
+				<div class="imageOverlay"></div>
+
+			    </div>
+
+			</li>			
+
+                        <li onclick="" class="Python col-xs-6 col-sm-4 col-md-3 col-lg-3">
+
+			    <div class="item">
+
+			        <img src="img/portfolio/thumbnails/icon-square.jpg">
+
+				<div class="icons">
+
+				    <a href="img/portfolio/icon.jpg" title="View image" 
+				    class="openButton" data-fancybox data-caption="This is the full image">
+				        <i class="fa fa-search"></i>
+				    </a>
+
+				    <a href="https://github.com/zw0930/MyProject-BuyingBehaviorPrediction" 
+				    target="_blank" rel="noopener noreferrer" class="projectLink">
+				        <i class="fa fa-link"></i>
+				    </a>
+
+				</div>
+
+				<div class="imageOverlay"></div>
+
+			    </div>
+
+			</li>			
+
+                        <li onclick="" class="ML col-xs-6 col-sm-4 col-md-3 col-lg-3">
+
+			    <div class="item">
+
+			        <img src="img/portfolio/thumbnails/icon-square.jpg">
+
+				<div class="icons">
+
+				    <a href="img/portfolio/icon.jpg" title="View image" 
+				    class="openButton" data-fancybox data-caption="This is the full image">
+				        <i class="fa fa-search"></i>
+				    </a>
+
+				    <a href="https://github.com/zw0930/MyProject-BuyingBehaviorPrediction" 
+				    target="_blank" rel="noopener noreferrer" class="projectLink">
+				        <i class="fa fa-link"></i>
+				    </a>
+
+				</div>
+
+				<div class="imageOverlay"></div>
+
+			    </div>
+
+			</li>			
+
+                        <li onclick="" class="Python col-xs-6 col-sm-4 col-md-3 col-lg-3">
+
+			    <div class="item">
+
+			        <img src="img/portfolio/thumbnails/icon-square.jpg">
+
+				<div class="icons">
+
+				    <a href="img/portfolio/icon.jpg" title="View image" 
+				    class="openButton" data-fancybox data-caption="This is the full image">
+				        <i class="fa fa-search"></i>
+				    </a>
+
+				    <a href="https://github.com/zw0930/MyProject-BuyingBehaviorPrediction" 
+				    target="_blank" rel="noopener noreferrer" class="projectLink">
+				        <i class="fa fa-link"></i>
+				    </a>
+
+				</div>
+
+				<div class="imageOverlay"></div>
+
+			    </div>
+
+			</li>			
+
+		    </ul>
+
+		</div>
+
+	    </div>
+
+	</div>
+
+	<div class="copyrightSection">
+
+            <div class="col-md-12 text-center">
+	        <p>&copy; Copyright Zhe Wang 2023</p>
+	    </div>
+
+	</div>
+
+    </div>
+
+    <!--Add countUp JS: numbers in the stats section-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.umd.js"></script>   
+    <script src="https://github.com/inorganik/CountUp.js"></script>
+    <script src="js/countUp-jquery.js"></script>
+    <!---Add Font Awesome JS: icons in the stats section-->
+    <script src="https://kit.fontawesome.com/ded260c890.js" crossorigin="anonymous"></script>
+    <!--Add Superslides JS-->
+    <script src="js/jquery.superslides.min.js"></script>
+    <!--Add Owl Carousel JS-->
+    <script src="js/owl.carousel.min.js"></script>
+    <!--Add easy-pie-chart JS-->
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <!--Add Typed.js JS: typing effect for the title-->
+    <script src="js/typed.min.js"></script>
+    <!--Add Popper, Before the JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!--Add Isotope JS: filter in the portfolio section-->
+    <script type="text/javascript" src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+    <!--Add Fancyapps JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    
+    <!--Add our JS-->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
